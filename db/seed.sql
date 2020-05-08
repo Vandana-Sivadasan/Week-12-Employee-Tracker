@@ -1,3 +1,31 @@
+DROP DATABASE IF EXISTS employees_db;
+CREATE database employees_db;
+
+USE employees_db;
+
+CREATE TABLE employee_list (
+  id INT NOT NULL,
+  first_name VARCHAR(50) NULL,
+  last_name VARCHAR(50) NULL,
+  role_id INT NULL,
+  manager_id VARCHAR(50) NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE role (
+id INT NOT NULL,
+  title VARCHAR(50) NULL,
+  salary DECIMAL,
+  department_id INT,
+  PRIMARY KEY (id)
+  );
+  
+  CREATE TABLE department (
+  department_id INT NOT NULL,
+  dept_name VARCHAR(50) NULL,
+  PRIMARY KEY (department_id)
+  );
+
 --Insert a set of data for department table:
 INSERT INTO department (id,name) VALUES ('1' ,'David Foster');
 INSERT INTO department (id,name) VALUES ('2' ,'John Doe');

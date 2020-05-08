@@ -46,7 +46,7 @@ CREATE TABLE employee_list (
   PRIMARY KEY (id) 
 );
 
-   
+SELECT * FROM employee_list;  
 
 -- Insert a set of data for department table:
 INSERT INTO department (id,name) VALUES ('1' ,'David Foster');
