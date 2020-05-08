@@ -19,29 +19,31 @@ USE employee_trackerdb;
 
 -- Create the 3 tables department,role and employee:
 --Table Department--
+CREATE TABLE department (
+  department_id INT NOT NULL,
+  dept_name VARCHAR(50) NULL,
+  PRIMARY KEY (department_id)
+  );
 
-CREATE TABLE department_db (
-  id INT NOT NULL AUTO INCREMENT,
-  name VARCHAR(30) NOT NULL,
-  PRIMART KEY (department),
-);
 
 --Table Role--
+CREATE TABLE role (
+id INT NOT NULL,
+  title VARCHAR(50) NULL,
+  salary DECIMAL,
+  department_id INT,
+  PRIMARY KEY (id)
+  );
 
-CREATE TABLE role_db (
-    id INT AUTO INCREMENT,
-    title VARCHAR(30) NOT NULL,
-    salary DECIMAL, 
-    department_id INT 
-);
 
 --Table Employee--
-CREATE TABLE employee_db (
-    id INT PRIMARY KEY
-    first_name VARCHAR(30)
-    last_name VARCHAR(30)
-    role_id INT 
-    manager_id INT 
+CREATE TABLE employee_list (
+    id INT NOT NULL,
+  first_name VARCHAR(50) NULL,
+  last_name VARCHAR(50) NULL,
+  role_id INT NULL,
+  manager_id VARCHAR(50) NULL,
+  PRIMARY KEY (id) 
 );
 
    
